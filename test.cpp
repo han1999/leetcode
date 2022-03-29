@@ -25,4 +25,8 @@ int main(){
 	for (auto ch:s){
 		cout<<ch<<" ";
 	} 
+	cout<<endl;
+	string s2="aaa";
+	s.replace(1, 2, s2);
+	cout<<s<<endl;
 }
