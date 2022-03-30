@@ -2,6 +2,9 @@
 #include <cstdio>
 #include <string>
 #include <iostream>
+#include <algorithm> 
+#include <cctype>
+#include <climits>
 using namespace std;
 
 
@@ -34,6 +37,12 @@ using namespace std;
 ////test bool
 //int main(){
 //	cout<<(3+2==5)<<endl;
+//	bool isOk=1;
+//	cout<<isOk<<endl;
+//	isOk=0;
+//	cout<<isOk<<endl;
+//	isOk=13;
+//	cout<<isOk<<endl;
 //} 
 
 ////test vector
@@ -45,9 +54,35 @@ using namespace std;
 //	}
 //}
 
-//test string append
+////test string append
+//int reverse(){
+//	cout<<"It is my reverse function"<<endl;
+//	string s="hanxiao";
+//	reverse(s.begin(), s.end());
+//	cout<<s<<endl;
+//}
+//int main(){
+//	string s="132";
+//	s.append("456");
+//	cout<<s<<endl;
+//	
+//	reverse(s.begin(), s.end());
+//	cout<<s<<endl; 
+//	
+//	reverse();
+//}
+
+////test int
+//int main(){
+//	cout<<INT_MAX<<" "<<INT_MIN<<endl;
+//	cout<<-17%10<<endl;
+//	cout<<17%(-10)<<endl; // the result has the same sign as the dividend
+//}
+
+//test char
 int main(){
-	string s="132";
-	s.append("456");
-	cout<<s<<endl;
+	cout<<isdigit('1')<<endl;
+	cout<<INT_MAX<<" "<<INT_MIN<<endl;
 }
+
+
