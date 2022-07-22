@@ -79,10 +79,15 @@ using namespace std;
 //	cout<<17%(-10)<<endl; // the result has the same sign as the dividend
 //}
 
-//test char
+////test char
+//int main(){
+//	cout<<isdigit('1')<<endl;
+//	cout<<INT_MAX<<" "<<INT_MIN<<endl;
+//}
+
+// ²âÊÔ mod
 int main(){
-	cout<<isdigit('1')<<endl;
-	cout<<INT_MAX<<" "<<INT_MIN<<endl;
-}
+	printf("%d",-123%10);//½á¹ûÎª-3 
+} 
 
 
