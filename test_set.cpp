@@ -16,4 +16,5 @@ int main(){
 	cout<<(st1==st2)<<endl;
 	
 	// 不管是 unordered_set还是set， 这两个都相等！ 
+//	if (st1.end()) cout<<"st1.end() is false"<<endl;// 编译错误 
 } 
