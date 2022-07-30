@@ -29,13 +29,24 @@ using namespace std;
 //}
 
 
-/**
-测试初试字符串到底是啥，能不能用s.size()
-*/ 
+///**
+//测试初试字符串到底是啥，能不能用s.size()
+//*/ 
+//int main(){
+//	string s;
+//	printf("%d\n", s.size()); 
+//	if (s=="") cout<<"s==\"\""<<endl; 
+//	//0
+//	//s==""
+//}
+
 int main(){
-	string s;
-	printf("%d\n", s.size()); 
-	if (s=="") cout<<"s==\"\""<<endl; 
-	//0
-	//s==""
+	int cnt=0;
+	
+	while (cnt++!=4){
+		string now;
+		cout<<now<<endl;
+		//结果是输出为空  
+		now+="1234 ";
+	}
 }
