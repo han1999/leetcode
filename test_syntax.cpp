@@ -100,31 +100,47 @@ mod的结果和被除数一样
 //	}
 //}
 
+///*
+//测试数组在内存中存储形式，初始化方式
+//*/ 
+//int main(){
+//	int a[3][5]={0,1,2,3,4,5,6,7};
+//	for (int i=0; i<3; i++){
+//		for (int j=0; j<5; j++){
+//			cout<<a[i][j]<<" ";
+//		}
+//		cout<<endl;
+//	}
+//	
+//	int b[3][5];
+//	for (int i=0; i<3; i++){
+//		for (int j=0; j<5; j++){
+//			cout<<b[i][j]<<" ";
+//		}
+//		cout<<endl;
+//	}
+////0 1 2 3 4
+////5 6 7 0 0
+////0 0 0 0 0
+////4253632 0 37 0 1261011
+////0 1 0 -1 -1
+////4253733 0 1 0 4254665
+//}
+
 /*
-测试数组在内存中存储形式，初始化方式
+测试引用
 */ 
 int main(){
-	int a[3][5]={0,1,2,3,4,5,6,7};
-	for (int i=0; i<3; i++){
-		for (int j=0; j<5; j++){
-			cout<<a[i][j]<<" ";
-		}
-		cout<<endl;
-	}
+//	int &b=3;//invalid initialization of non-const reference of type 'int&' from an rvalue of type 'int'
+	const int &k=3;//不能用常量赋值 引用类型的变量, 但是可以赋值给常量引用 
+	int b=3;
+	int &a=b;//引用写法 
+	a=4;
+	cout<<"a:"<<a<<" b:"<<b<<endl;//a:4 b:4
 	
-	int b[3][5];
-	for (int i=0; i<3; i++){
-		for (int j=0; j<5; j++){
-			cout<<b[i][j]<<" ";
-		}
-		cout<<endl;
-	}
-//0 1 2 3 4
-//5 6 7 0 0
-//0 0 0 0 0
-//4253632 0 37 0 1261011
-//0 1 0 -1 -1
-//4253733 0 1 0 4254665
+	int c=a;//c是普通变量，c改变，a不改变 
+	c=5;
+	cout<<"a:"<<a<<" c:"<<c<<endl;//a:4 c:5
+	
 }
-
 

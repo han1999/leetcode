@@ -56,3 +56,46 @@ public:
         return ans;
     }
 }; 
+
+//2022.08.10
+class Solution {
+public:
+    // /*
+    // 单单形参是long long 不行，关键是实参需要是LL
+    //solution1:
+    // */
+    // double quickPow(double x, long long n){
+        /*
+        终止条件不能使n==1 因为 n很可能等于0, 或者在quickPow之前特判n！=0
+        */
+    //     if (n==0) return 1.0;
+    //     double temp=quickPow(x, n/2);
+        /*
+        n&1小技巧
+        */
+    //     if (n&1) return x*temp*temp;
+    //     else return temp*temp;
+    // }
+
+    //solution2:
+    double quickPow(double x, long long n){
+        double ans=1.0;
+        double mul=x;
+        while (n){
+            if (n&1){
+                ans*=mul;
+            }
+            mul*=mul;
+            n>>=1;
+        }
+        return ans;
+    }
+    double myPow(double x, int n) {
+        if (x==0) return 0.0;
+        if (n>0) return quickPow(x,n);
+        else {
+            //0LL技巧
+            return 1.0/quickPow(x, 0LL-n);
+        }
+    }
+};
