@@ -127,20 +127,26 @@ mod的结果和被除数一样
 ////4253733 0 1 0 4254665
 //}
 
-/*
-测试引用
-*/ 
+///*
+//测试引用
+//*/ 
+//int main(){
+////	int &b=3;//invalid initialization of non-const reference of type 'int&' from an rvalue of type 'int'
+//	const int &k=3;//不能用常量赋值 引用类型的变量, 但是可以赋值给常量引用 
+//	int b=3;
+//	int &a=b;//引用写法 
+//	a=4;
+//	cout<<"a:"<<a<<" b:"<<b<<endl;//a:4 b:4
+//	
+//	int c=a;//c是普通变量，c改变，a不改变 
+//	c=5;
+//	cout<<"a:"<<a<<" c:"<<c<<endl;//a:4 c:5
+//	
+//}
+
 int main(){
-//	int &b=3;//invalid initialization of non-const reference of type 'int&' from an rvalue of type 'int'
-	const int &k=3;//不能用常量赋值 引用类型的变量, 但是可以赋值给常量引用 
-	int b=3;
-	int &a=b;//引用写法 
-	a=4;
-	cout<<"a:"<<a<<" b:"<<b<<endl;//a:4 b:4
-	
-	int c=a;//c是普通变量，c改变，a不改变 
-	c=5;
-	cout<<"a:"<<a<<" c:"<<c<<endl;//a:4 c:5
-	
+	int n=3;
+	const int b=n;//竟然可以把一个变量的值赋值给一个常量！！！ 
+	int a[n]={0};
 }
 
