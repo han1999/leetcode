@@ -144,9 +144,46 @@ mod的结果和被除数一样
 //	
 //}
 
+/*
+测试常量
+*/ 
+//int main(){
+//	int n=3;
+//	const int b=n;//竟然可以把一个变量的值赋值给一个常量！！！ 
+//	int a[n]={0};
+//}
+
+/*
+测试递归函数能否作为匿名函数 测试auto 
+*/
+/*
+好家伙，形参竟然可以是auto类型，但是返回值必须指定特定的类型
+*/ 
+int fun(auto a){
+	if (a==0 || a==1) return 1;
+	return fun(a-1)+fun(a-2);
+} 
+
 int main(){
-	int n=3;
-	const int b=n;//竟然可以把一个变量的值赋值给一个常量！！！ 
-	int a[n]={0};
+//	int n;
+//	auto f =[](int n)->int{
+//		//161	10	C:\Users\hx\leetcode\test_syntax.cpp	[Error] use of 'f' before deduction of 'auto'
+//		if (n==1 || n==0) return 1;
+//		return f(n-1)+f(n-2);	
+//	};
+//	cout<<f(5);
+	
+	
+	cout<<fun(5)<<endl;
+	auto fun1=[](int a, int b){
+		a=5;
+		b=5;
+	};
+	int a=1,b=1;
+	fun1(a,b);
+	cout<<"a:"<<a<<" b:"<<b<<endl;//a:1 b:1
+	//如果要改变a,b值， 必须是int &a, int &b，和[]内没有关系 
 }
+
+
 
