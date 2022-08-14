@@ -1,5 +1,6 @@
 #include <string>
 #include <iostream>
+#include <vector>
 using namespace std;
 //int main(){
 //	string s="123456";
@@ -40,13 +41,32 @@ using namespace std;
 //	//s==""
 //}
 
+/*
+while循环里面，string 每次都被赋了初值
+*/ 
+//int main(){
+//	int cnt=0;
+//	
+//	while (cnt++!=4){
+//		string now;
+//		cout<<now<<endl;
+//		//结果是输出为空  
+//		now+="1234 ";
+//	}
+//}
+
+
 int main(){
-	int cnt=0;
+	string s;
+	if (s=="123") cout<<"s==\"123\""<<endl;//可以进行比较
 	
-	while (cnt++!=4){
-		string now;
-		cout<<now<<endl;
-		//结果是输出为空  
-		now+="1234 ";
+	vector<string> vt;
+	int cnt=0; 
+	while (cnt++<5){
+		string temp;
+		temp.clear();
+		
+		vt.push_back(temp); //5个空串可以push_back进去 
 	}
+	cout<<vt.size()<<endl;
 }
