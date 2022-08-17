@@ -3,12 +3,12 @@
 using namespace std;
 int partition(vector<int> &nums, int l, int r){
 	int pivot=l-1;
-	for (int i=l; i<r; i++){
-		if (nums[i]<nums[r]){
+	for (int i=l; i<=r; i++){
+		if (nums[i]<=nums[r]){
 			swap(nums[i], nums[++pivot]);
 		}
 	}
-	swap(nums[r], nums[++pivot]);
+//	swap(nums[r], nums[++pivot]);
 	return pivot;	
 }
 
